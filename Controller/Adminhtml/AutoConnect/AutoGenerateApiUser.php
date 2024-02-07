@@ -116,7 +116,7 @@ class AutoGenerateApiUser
      * @param $password
      * @param int|null $store
      * @return array
-     * @throws Exception
+     * @throws \Exception
      */
     public function createApiUser($password, $store)
     {
@@ -144,7 +144,7 @@ class AutoGenerateApiUser
             $apiUser->save();
         } catch (\Exception $ex) {
             $this->logger->debug($ex->getMessage());
-            throw new Exception($ex->getMessage());
+            throw new \Exception($ex->getMessage());
         }
 
         $apiUserArray = [

@@ -27,6 +27,11 @@ class Display extends Action implements HttpPostActionInterface
     private $supportService;
 
     /**
+     * @var RequestInterface
+     */
+    private $request;
+
+    /**
      * Display Constructor.
      *
      * @param Context $context
